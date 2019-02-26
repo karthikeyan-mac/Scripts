@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Copy stuff to existing/future users, set ownership and permissions.
+
+
+defaults write /System/Library/User\ Template/English.lproj/Library/Preferences/com.microsoft.Lync acceptedSLT140 -bool true
+defaults write /System/Library/User\ Template/English.lproj/Library/Preferences/com.microsoft.Lync DoNotShowConfProviderAlert -bool true
+
+# Copy to existing user directories and set ownership and permissions.
+
+for i in $(/bin/ls /Users | sed -e '/Shared/d' -e '/Deleted Users/d' -e '/.localized/d' -e '/.DS_Store/d' -e '/.com.apple.timemachine.supported/d' -e '/Adobe/d' -e '/Library/d');
+
+do
+
+defaults write /Users/$i/Library/Preferences/com.microsoft.Lync acceptedSLT140 -bool true
+defaults write /Users/$i/Library/Preferences/com.microsoft.Lync DoNotShowConfProviderAlert -bool true
+
+
+done
+
+exit 0
