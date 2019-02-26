@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-# Copy stuff to existing/future users, set ownership and permissions.
+# Copy/Add/Edit stuff to existing/future users, set ownership and permissions.
+# Karthikeyan Marappan
 
 
 defaults write /System/Library/User\ Template/English.lproj/Library/Preferences/com.microsoft.Lync acceptedSLT140 -bool true
