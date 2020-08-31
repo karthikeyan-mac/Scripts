@@ -2,7 +2,9 @@
 # Script to download (curl) dockutil and execute it
 #
 # Karthikeyan 
-# https://github.com/kcrawford/dockutil
+# Docktuil Link - https://github.com/kcrawford/dockutil
+# Thanks to Dockutil developer
+
 
 /usr/bin/curl -s https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil -o /private/tmp/dockutil
 /bin/chmod a+x /private/tmp/dockutil
